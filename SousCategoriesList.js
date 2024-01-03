@@ -35,9 +35,16 @@ const SousCategoriesList = ({ route, navigation }) => {
     // Navigate to the ProductsList screen with the selected sousCategorie
     navigation.navigate('Products', { sousCategorie });
   };
+  const handleBackPress = () => {
+    // Go back to the previous screen
+    navigation.goBack();
+  };
 
   return (
     <View style={{ flex: 1, alignItems: 'center', marginBottom: 10 }}>
+      <TouchableOpacity onPress={handleBackPress}>
+        <Text>Back</Text>
+      </TouchableOpacity>
       <Text>{categorie.nom}</Text>
       {/* <Text>{categorie.id}</Text> */}
 

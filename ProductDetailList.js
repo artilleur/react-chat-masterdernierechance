@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, ScrollView } from 'react-native';
+import { View, Text, Image, ScrollView ,TouchableOpacity} from 'react-native';
 import { PinchGestureHandler, State } from 'react-native-gesture-handler';
 import { ViewPropTypes } from 'deprecated-react-native-prop-types';
 
@@ -19,9 +19,15 @@ const ProductDetailList = ({ route }) => {
       scale = Math.max(1, Math.min(scale, 2));
     }
   };
+  const handleBackPress = () => {
+    // Go back to the previous screen
+    navigation.goBack();
+  };
 
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+      
+      
       <PinchGestureHandler
         onGestureEvent={onPinchGestureEvent}
         onHandlerStateChange={onPinchHandlerStateChange}
@@ -33,7 +39,7 @@ const ProductDetailList = ({ route }) => {
             }}
             style={{ width: 150 * scale, height: 150 * scale }}
           />
-          <View style={{ alignItems: 'center', marginVertical: 35, marginHorizontal: 50 }}>
+          <View style={{ alignItems: 'center', marginVertical: 35, marginHorizontal: 20 }}>
             <Text style={{ color: 'red' }}>NOM</Text>
             <Text>{product.nom} {'\n'} </Text>
             <Text style={{ color: 'red' }}>PRIX {'\n'}</Text>
@@ -42,7 +48,7 @@ const ProductDetailList = ({ route }) => {
             <Text style={{ backgroundColor: 'lightblue', padding: 10 }}>
   {product.description} {'\n'} {'\n'} {'\n'}
 </Text>
-            {/* You can display other product details here */}
+            
           </View>
         </View>
       </PinchGestureHandler>

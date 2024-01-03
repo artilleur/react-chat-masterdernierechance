@@ -37,9 +37,16 @@ const ProductsList = ({ route }) => {
     // Navigate to the ProductDetailList screen with the selected product
     navigation.navigate('ProductDetail', { product });
   };
+  const handleBackPress = () => {
+    // Go back to the previous screen
+    navigation.goBack();
+  };
 
   return (
     <View style={{ alignItems: 'center', marginBottom: 10 }}>
+      <TouchableOpacity onPress={handleBackPress}>
+        <Text>Back</Text>
+      </TouchableOpacity>
       <Text>{sousCategorie.nom}</Text>
       <Text>{sousCategorie.id}</Text>
 
@@ -61,7 +68,7 @@ const ProductsList = ({ route }) => {
               <Text style={{ color: 'red' }}>PRIX {'\n'}</Text>
               <Text>{product.prix}€ {'\n'} {'\n'} {'\n'} </Text>
               {/* <Text>{product.description} {'\n'} {'\n'} {'\n'} </Text> */}
-              {/* You can display other product details here */}
+              
             </View>
           </TouchableOpacity>
         )}
