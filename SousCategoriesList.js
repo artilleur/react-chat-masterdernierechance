@@ -43,7 +43,7 @@ const SousCategoriesList = ({ route, navigation }) => {
   return (
     <View style={{ flex: 1, alignItems: 'center', marginBottom: 10 }}>
       <TouchableOpacity onPress={handleBackPress}>
-        <Text>Back</Text>
+        <Text>retour categories</Text>
       </TouchableOpacity>
       <Text>{categorie.nom}</Text>
       {/* <Text>{categorie.id}</Text> */}
