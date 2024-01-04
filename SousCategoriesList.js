@@ -54,7 +54,7 @@ const SousCategoriesList = ({ route, navigation }) => {
 </Text>
 
       </TouchableOpacity>
-      <Text style={styles.categoryText }>{categorie.nom}</Text>
+      <Text style={{ backgroundColor:'springgreen', fontSize:24, padding:22, marginTop:40}}> {categorie.nom}</Text>
       <Text>{'\n'} </Text>
 
       <FlatList
@@ -74,7 +74,7 @@ const SousCategoriesList = ({ route, navigation }) => {
                 
               />
               
-              <Text style={{ backgroundColor:'coral', fontSize:24, padding:25}}> {sousCategorie.nom}</Text>
+              <Text style={{ backgroundColor:'coral',   width: 155, height: 120  , fontSize:24, padding:25}}> {sousCategorie.nom}</Text>
               
             </View>
           </TouchableOpacity>
