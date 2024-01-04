@@ -43,9 +43,9 @@ const ProductsList = ({ route }) => {
   };
 
   return (
-    <View style={{ alignItems: 'center', marginBottom: 10 }}>
+    <View style={{ alignItems: 'center', marginBottom: 10,  marginTop: 50}}>
       <TouchableOpacity onPress={handleBackPress}>
-        <Text>retour sous_categories</Text>
+        <Text style={{ color: 'green' }}>RETOUR SOUS_CATEGORIES</Text>
       </TouchableOpacity>
       <Text>{sousCategorie.nom}</Text>
       <Text>{sousCategorie.id}</Text>

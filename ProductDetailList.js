@@ -26,11 +26,11 @@ const ProductDetailList = ({ route }) => {
   };
 
   return (
-    <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+    <ScrollView contentContainerStyle={{ flexGrow: 1, marginTop: 50 }}>
       <View style={{ alignItems: 'center', marginBottom: 'center' }}>
-      <TouchableOpacity onPress={handleBackPress}>
-        <Text>retour liste produits</Text>
-      </TouchableOpacity>
+        <TouchableOpacity onPress={handleBackPress}>
+          <Text style={{ color: 'red' }}>RETOUR LISTE PRODUITS</Text>
+        </TouchableOpacity>
       </View>
       <PinchGestureHandler
         onGestureEvent={onPinchGestureEvent}
@@ -50,9 +50,8 @@ const ProductDetailList = ({ route }) => {
             <Text>{product.prix}€ {'\n'} {'\n'} {'\n'} </Text>
             
             <Text style={{ backgroundColor: 'lightblue', padding: 10 }}>
-  {product.description} {'\n'} {'\n'} {'\n'}
-</Text>
-            
+              {product.description} {'\n'} {'\n'} {'\n'}
+            </Text>
           </View>
         </View>
       </PinchGestureHandler>
