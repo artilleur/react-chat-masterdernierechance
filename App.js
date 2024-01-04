@@ -9,7 +9,7 @@ import ProductsList from './ProductsList';
 import ProductDetailList from './ProductDetailList';
 import { ViewPropTypes } from 'deprecated-react-native-prop-types';
 import { ImageBackground, StyleSheet } from 'react-native';
-
+import ProductEdit from './ProductEdit';
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -23,6 +23,7 @@ const App = () => {
         <Stack.Screen name="SousCategories" component={SousCategoriesList} />
         <Stack.Screen name="Products" component={ProductsList} />
         <Stack.Screen name="ProductDetail" component={ProductDetailList} />
+        <Stack.Screen name="ProductEdit" component={ProductEdit} />
       </Stack.Navigator>
     </NavigationContainer>
     </ImageBackground>

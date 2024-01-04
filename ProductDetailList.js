@@ -24,6 +24,10 @@ const ProductDetailList = ({ route }) => {
     // Go back to the previous screen
     navigation.goBack();
   };
+  const handleEditPress = () => {
+    // Naviguer vers la page de modification avec les détails du produit
+    navigation.navigate('ProductEdit', { product });
+  };
 
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1, marginTop: 50 }}>
@@ -53,6 +57,9 @@ const ProductDetailList = ({ route }) => {
             <Text style={{ backgroundColor: 'lightblue', padding: 10 }}>
               {product.description} {'\n'} {'\n'} {'\n'}
             </Text>
+            <TouchableOpacity onPress={handleEditPress}>
+            <Text style={{ color: 'blue' }}>Modifier</Text>
+          </TouchableOpacity>
           </View>
         </View>
       </PinchGestureHandler>
