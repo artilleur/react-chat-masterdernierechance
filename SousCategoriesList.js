@@ -73,8 +73,8 @@ const SousCategoriesList = ({ route, navigation }) => {
                 
                 
               />
-              
-              <Text style={{ backgroundColor:'coral',   width: 155, height: 120  , fontSize:24, padding:25}}> {sousCategorie.nom}</Text>
+              <Text></Text>
+              <Text style={{ backgroundColor:'coral',   width: 250, height: 80  , fontSize:24, padding:25}}> {sousCategorie.nom}</Text>
               
             </View>
           </TouchableOpacity>
