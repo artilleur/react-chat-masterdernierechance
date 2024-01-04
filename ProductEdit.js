@@ -22,6 +22,12 @@ const ProductEdit = ({ route, navigation }) => {
         value={editedProduct.nom}
         onChangeText={(text) => setEditedProduct({ ...editedProduct, nom: text })}
       />
+      <Text>PRIX:</Text>
+      <TextInput
+        style={styles.input}
+        value={editedProduct.prix}
+        onChangeText={(text) => setEditedProduct({ ...editedProduct, prix: text })}
+      />
 
       {/* Ajoutez d'autres champs d'édition pour d'autres propriétés du produit */}
 
