@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     color: 'red', // Couleur rouge
+    backgroundColor: 'yellow', padding:20 // Couleur de fond lime
   },
 });
 
