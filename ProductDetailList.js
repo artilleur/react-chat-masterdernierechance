@@ -29,7 +29,7 @@ const ProductDetailList = ({ route }) => {
     <ScrollView contentContainerStyle={{ flexGrow: 1, marginTop: 50 }}>
       <View style={{ alignItems: 'center', marginBottom: 'center' }}>
         <TouchableOpacity onPress={handleBackPress}>
-          <Text style={{ color: 'white', backgroundColor:'red', padding:10 }}>{'\n'} {'\n'}  RETOUR LISTE PRODUITS {'\n'} {'\n'} </Text>
+          <Text style={{ color: 'white', backgroundColor:'red', padding:10 }}  >{'\n'} {'\n'}  RETOUR LISTE PRODUITS {'\n'} {'\n'} </Text>
         </TouchableOpacity>
       </View>
       <PinchGestureHandler
@@ -37,15 +37,16 @@ const ProductDetailList = ({ route }) => {
         onHandlerStateChange={onPinchHandlerStateChange}
       >
         <View style={{ alignItems: 'center', marginBottom: 10 }}>
+        <Text style={{ color: 'red' }}>NOM</Text>
+            <Text style={{ backgroundColor:'lime', padding:8}}>{'\n'} {product.nom} {'\n'} </Text>
           <Image
-            source={{
-              uri: `http://10.0.2.2:8000/images/${product.image}`,
+            source= {{ 
+              uri:  `http://10.0.2.2:8000/images/${product.image}`,
             }}
             style={{ width: 150 * scale, height: 150 * scale }}
           />
           <View style={{ alignItems: 'center', marginVertical: 35, marginHorizontal: 20 }}>
-            <Text style={{ color: 'red' }}>NOM</Text>
-            <Text>{product.nom} {'\n'} </Text>
+            
             <Text style={{ color: 'red' }}>PRIX {'\n'}</Text>
             <Text>{product.prix}€ {'\n'} {'\n'} {'\n'} </Text>
             

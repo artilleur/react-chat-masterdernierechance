@@ -1,7 +1,7 @@
 // ProductsList.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native';
+import { View, Text, FlatList, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';  // Importez le hook useNavigation
 import ProductDetailList from './ProductDetailList';
 import { ViewPropTypes } from 'deprecated-react-native-prop-types';
@@ -42,13 +42,21 @@ const ProductsList = ({ route }) => {
     navigation.goBack();
   };
 
+  const styles = StyleSheet.create({
+    categoryText: {
+      fontSize: 35,
+      backgroundColor: 'lightsalmon',
+    },
+  });
+
   return (
     <View style={{ alignItems: 'center', marginBottom: 10,  marginTop: 50}}>
       <TouchableOpacity onPress={handleBackPress}>
         <Text style={{ color: 'white', backgroundColor:'red', padding:10}}>{'\n'} {'\n'}  RETOUR SOUS_CATEGORIES {'\n'} {'\n'} </Text>
       </TouchableOpacity>
-      <Text>{sousCategorie.nom}</Text>
-      <Text>{sousCategorie.id}</Text>
+      
+      <Text style={styles.categoryText}>{sousCategorie.nom}</Text>
+      <Text></Text>
 
       <FlatList
         data={filteredProducts}
@@ -64,9 +72,9 @@ const ProductsList = ({ route }) => {
               />
               <View style={{ alignItems: 'center', marginBottom: 10 }}></View>
               <Text style={{ color: 'red' }}>NOM</Text>
-              <Text>{product.nom} {'\n'} </Text>
+              <Text style={{ backgroundColor:'lime', padding:8}}>{'\n'} {product.nom} {'\n'} </Text>
               <Text style={{ color: 'red' }}>PRIX {'\n'}</Text>
-              <Text>{product.prix}€ {'\n'} {'\n'} {'\n'} </Text>
+              <Text>{product.prix}€ {'\n'} {'\n'} {'\n'} {'\n'} {'\n'} {'\n'} {'\n'} {'\n'} {'\n'} </Text>
               {/* <Text>{product.description} {'\n'} {'\n'} {'\n'} </Text> */}
               
             </View>

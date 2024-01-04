@@ -38,7 +38,7 @@ const CategoriesList = ({ navigation }) => {
             <View style={{ alignItems: 'center', marginVertical:30 }}>
               <Image source={{ uri: `http://10.0.2.2:8000/images/${item.image}` }} style={{ width: 150, height: 150 }} />
               <Text>{item.nom}</Text>
-              <Text>{item.id}</Text>
+              {/* <Text>{item.id}</Text> */}
             </View>
           </TouchableOpacity>
         )}
