@@ -1,6 +1,6 @@
 // ProductEdit.js
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, Image } from 'react-native';
 
 const ProductEdit = ({ route, navigation }) => {
   const { product } = route.params;
@@ -32,8 +32,14 @@ const ProductEdit = ({ route, navigation }) => {
       <TextInput
         style={styles.input}
         value={editedProduct.description} 
-        onChangeText={(text) => setEditedProduct({ ...editedProduct, description: text  } )}
+        onChangeText={(text) => setEditedProduct({ ...editedProduct, prix: text  } )}
       />
+       <Image
+            source= {{ 
+              uri:  `http://10.0.2.2:8000/images/${product.image}`,
+            }}
+            style={{ width: 150 , height: 150  }}
+          />
 
       {/* Ajoutez d'autres champs d'édition pour d'autres propriétés du produit */}
 
