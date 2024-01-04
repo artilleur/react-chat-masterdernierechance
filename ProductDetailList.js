@@ -29,7 +29,7 @@ const ProductDetailList = ({ route }) => {
     <ScrollView contentContainerStyle={{ flexGrow: 1, marginTop: 50 }}>
       <View style={{ alignItems: 'center', marginBottom: 'center' }}>
         <TouchableOpacity onPress={handleBackPress}>
-          <Text style={{ color: 'red' }}>RETOUR LISTE PRODUITS {'\n'} {'\n'} </Text>
+          <Text style={{ color: 'white', backgroundColor:'red', padding:10 }}>{'\n'} {'\n'}  RETOUR LISTE PRODUITS {'\n'} {'\n'} </Text>
         </TouchableOpacity>
       </View>
       <PinchGestureHandler
