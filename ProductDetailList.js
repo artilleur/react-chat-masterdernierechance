@@ -37,7 +37,7 @@ const ProductDetailList = ({ route }) => {
         onHandlerStateChange={onPinchHandlerStateChange}
       >
         <View style={{ alignItems: 'center', marginBottom: 10 }}>
-        <Text style={{ color: 'red' }}>NOM</Text>
+        <Text style={{ color: 'red' }}></Text>
             <Text style={{ backgroundColor:'lime', padding:8}}>{'\n'} {product.nom} {'\n'} </Text>
           <Image
             source= {{ 

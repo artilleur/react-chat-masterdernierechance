@@ -46,15 +46,19 @@ const ProductsList = ({ route }) => {
     categoryText: {
       fontSize: 35,
       backgroundColor: 'lightsalmon',
+      width: 250,
+      height: 100,
+      textAlign: 'center', // Centrer le texte horizontalement
+      lineHeight: 100, // Centrer le texte verticalement (en fonction de la hauteur du conteneur)
     },
   });
-
+  
   return (
-    <View style={{ alignItems: 'center', marginBottom: 10,  marginTop: 50}}>
+    <View style={{ alignItems: 'center', marginBottom: 10, marginTop: 50 }}>
       <TouchableOpacity onPress={handleBackPress}>
-        <Text style={{ color: 'white', backgroundColor:'red', padding:10}}>{'\n'} {'\n'}  RETOUR SOUS_CATEGORIES {'\n'} {'\n'} </Text>
+        <Text style={{ color: 'white', backgroundColor: 'red', padding: 10 }}>{'\n'} {'\n'} RETOUR SOUS_CATEGORIES {'\n'} {'\n'} </Text>
       </TouchableOpacity>
-      
+      <Text></Text>
       <Text style={styles.categoryText}>{sousCategorie.nom}</Text>
       <Text></Text>
 

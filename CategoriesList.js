@@ -37,8 +37,9 @@ const CategoriesList = ({ navigation }) => {
           <TouchableOpacity onPress={() => handleCategoriePress(item)}>
             <View style={{ alignItems: 'center', marginVertical:30 }}>
               <Image source={{ uri: `http://10.0.2.2:8000/images/${item.image}` }} style={{ width: 150, height: 150 }} />
-              <Text>{item.nom}</Text>
-              {/* <Text>{item.id}</Text> */}
+              <Text></Text>
+              <Text style={{ backgroundColor:'coral',   width: 180, height: 80  , fontSize:24, padding:25}}> {item.nom}</Text>
+            
             </View>
           </TouchableOpacity>
         )}
