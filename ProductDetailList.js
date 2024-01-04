@@ -2,10 +2,11 @@ import React from 'react';
 import { View, Text, Image, ScrollView ,TouchableOpacity} from 'react-native';
 import { PinchGestureHandler, State } from 'react-native-gesture-handler';
 import { ViewPropTypes } from 'deprecated-react-native-prop-types';
+import { useNavigation } from '@react-navigation/native';
 
 const ProductDetailList = ({ route }) => {
   const { product } = route.params;
-
+  const navigation = useNavigation();
   let scale = 1;
 
   const onPinchGestureEvent = event => {
@@ -26,8 +27,11 @@ const ProductDetailList = ({ route }) => {
 
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-      
-      
+      <View style={{ alignItems: 'center', marginBottom: 'center' }}>
+      <TouchableOpacity onPress={handleBackPress}>
+        <Text>Back</Text>
+      </TouchableOpacity>
+      </View>
       <PinchGestureHandler
         onGestureEvent={onPinchGestureEvent}
         onHandlerStateChange={onPinchHandlerStateChange}
