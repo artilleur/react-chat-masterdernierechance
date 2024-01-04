@@ -71,7 +71,7 @@ const ProductsList = ({ route }) => {
                 style={{ width: 150, height: 150 }}
               />
               <View style={{ alignItems: 'center', marginBottom: 10 }}></View>
-              <Text style={{ color: 'red' }}>NOM</Text>
+              {/* <Text style={{ color: 'red' }}>NOM</Text> */}
               <Text style={{ backgroundColor:'lime', padding:8}}>{'\n'} {product.nom} {'\n'} </Text>
               <Text style={{ color: 'red' }}>PRIX {'\n'}</Text>
               <Text>{product.prix}€ {'\n'} {'\n'} {'\n'} {'\n'} {'\n'} {'\n'} {'\n'} {'\n'} {'\n'} </Text>
