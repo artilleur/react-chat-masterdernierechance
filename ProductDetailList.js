@@ -28,6 +28,10 @@ const ProductDetailList = ({ route }) => {
     // Naviguer vers la page de modification avec les détails du produit
     navigation.navigate('ProductEdit', { product });
   };
+    const handleAddProduct = () => {
+    // Navigate to AjoutProduit screen
+    navigation.navigate('AjoutProduit');
+    }
 
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1, marginTop: 50 }}>
@@ -60,6 +64,9 @@ const ProductDetailList = ({ route }) => {
             <TouchableOpacity onPress={handleEditPress}>
             <Text style={{ color: 'blue' }}>Modifier</Text>
           </TouchableOpacity>
+           <TouchableOpacity onPress={handleAddProduct}>
+        <Text style={{ color: 'blue' }}>Ajouter un nouveau produit</Text>
+      </TouchableOpacity>
           </View>
         </View>
       </PinchGestureHandler>

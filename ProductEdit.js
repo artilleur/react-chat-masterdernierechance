@@ -1,6 +1,7 @@
 // ProductEdit.js
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, Image } from 'react-native';
+// import ImagePicker from 'react-native-image-crop-picker';
 
 const ProductEdit = ({ route, navigation }) => {
   const { product } = route.params;
