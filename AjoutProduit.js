@@ -22,7 +22,7 @@ const AjoutProduit = () => {
   const handleCancel = () => {
     // Navigate back or to any other screen as needed
     // For example, navigating back to the previous screen
-    // navigation.goBack();
+     navigation.goBack();
   };
 
   return (
